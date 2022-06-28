@@ -30,15 +30,19 @@ namespace Taxi.Areas.Dispetcher
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.localityN_tb = new System.Windows.Forms.TextBox();
-            this.streetN_tb = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.houseN_nud = new System.Windows.Forms.NumericUpDown();
+            this.podezdN_nud = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             this.corpusN_nud = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.houseN_nud = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.streetN_tb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.localityN_tb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.podezdK_nud = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.corpusK_nud = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.houseK_nud = new System.Windows.Forms.NumericUpDown();
@@ -50,31 +54,29 @@ namespace Taxi.Areas.Dispetcher
             this.car_dgv = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.add_btn = new System.Windows.Forms.Button();
             this.refresh_btn = new System.Windows.Forms.Button();
-            this.podezdN_nud = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.podezdK_nud = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
+            this.add_btn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.econom_rb = new System.Windows.Forms.RadioButton();
-            this.comfort_rb = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.bagazh_cb = new System.Windows.Forms.CheckBox();
+            this.price_lb = new System.Windows.Forms.Label();
             this.zivotnoe_cb = new System.Windows.Forms.CheckBox();
+            this.bagazh_cb = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comfort_rb = new System.Windows.Forms.RadioButton();
+            this.econom_rb = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.houseN_nud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.podezdN_nud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corpusN_nud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseN_nud)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.podezdK_nud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corpusK_nud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseK_nud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_dgv)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.podezdN_nud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.podezdK_nud)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,46 +100,57 @@ namespace Taxi.Areas.Dispetcher
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Откуда";
             // 
-            // label1
+            // podezdN_nud
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Населённый пункт";
+            this.podezdN_nud.Location = new System.Drawing.Point(9, 244);
+            this.podezdN_nud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.podezdN_nud.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.podezdN_nud.Name = "podezdN_nud";
+            this.podezdN_nud.Size = new System.Drawing.Size(134, 24);
+            this.podezdN_nud.TabIndex = 9;
+            this.podezdN_nud.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // localityN_tb
+            // label9
             // 
-            this.localityN_tb.Location = new System.Drawing.Point(9, 51);
-            this.localityN_tb.Name = "localityN_tb";
-            this.localityN_tb.Size = new System.Drawing.Size(284, 24);
-            this.localityN_tb.TabIndex = 1;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 223);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 18);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Подъезд";
             // 
-            // streetN_tb
+            // corpusN_nud
             // 
-            this.streetN_tb.Location = new System.Drawing.Point(9, 99);
-            this.streetN_tb.Name = "streetN_tb";
-            this.streetN_tb.Size = new System.Drawing.Size(284, 24);
-            this.streetN_tb.TabIndex = 3;
+            this.corpusN_nud.Location = new System.Drawing.Point(9, 196);
+            this.corpusN_nud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.corpusN_nud.Name = "corpusN_nud";
+            this.corpusN_nud.Size = new System.Drawing.Size(134, 24);
+            this.corpusN_nud.TabIndex = 7;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Улица";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Дом";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 18);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Корпус";
             // 
             // houseN_nud
             // 
@@ -161,26 +174,48 @@ namespace Taxi.Areas.Dispetcher
             0,
             0});
             // 
-            // corpusN_nud
+            // label3
             // 
-            this.corpusN_nud.Location = new System.Drawing.Point(9, 196);
-            this.corpusN_nud.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.corpusN_nud.Name = "corpusN_nud";
-            this.corpusN_nud.Size = new System.Drawing.Size(134, 24);
-            this.corpusN_nud.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Дом";
             // 
-            // label4
+            // streetN_tb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Корпус";
+            this.streetN_tb.Location = new System.Drawing.Point(9, 99);
+            this.streetN_tb.Name = "streetN_tb";
+            this.streetN_tb.Size = new System.Drawing.Size(284, 24);
+            this.streetN_tb.TabIndex = 3;
+            this.streetN_tb.Text = "sdfsdf";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Улица";
+            // 
+            // localityN_tb
+            // 
+            this.localityN_tb.Location = new System.Drawing.Point(9, 51);
+            this.localityN_tb.Name = "localityN_tb";
+            this.localityN_tb.Size = new System.Drawing.Size(284, 24);
+            this.localityN_tb.TabIndex = 1;
+            this.localityN_tb.Text = "adfasdadsa";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Населённый пункт";
             // 
             // groupBox2
             // 
@@ -201,6 +236,37 @@ namespace Taxi.Areas.Dispetcher
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Куда";
+            // 
+            // podezdK_nud
+            // 
+            this.podezdK_nud.Location = new System.Drawing.Point(9, 244);
+            this.podezdK_nud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.podezdK_nud.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.podezdK_nud.Name = "podezdK_nud";
+            this.podezdK_nud.Size = new System.Drawing.Size(134, 24);
+            this.podezdK_nud.TabIndex = 11;
+            this.podezdK_nud.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 223);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 18);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Подъезд";
             // 
             // corpusK_nud
             // 
@@ -260,6 +326,7 @@ namespace Taxi.Areas.Dispetcher
             this.streetK_tb.Name = "streetK_tb";
             this.streetK_tb.Size = new System.Drawing.Size(284, 24);
             this.streetK_tb.TabIndex = 3;
+            this.streetK_tb.Text = "dsfsdf";
             // 
             // label7
             // 
@@ -276,6 +343,7 @@ namespace Taxi.Areas.Dispetcher
             this.localityK_tb.Name = "localityK_tb";
             this.localityK_tb.Size = new System.Drawing.Size(284, 24);
             this.localityK_tb.TabIndex = 1;
+            this.localityK_tb.Text = "sadasdas";
             // 
             // label8
             // 
@@ -292,7 +360,7 @@ namespace Taxi.Areas.Dispetcher
             this.car_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.car_dgv.Location = new System.Drawing.Point(3, 20);
             this.car_dgv.Name = "car_dgv";
-            this.car_dgv.Size = new System.Drawing.Size(561, 417);
+            this.car_dgv.Size = new System.Drawing.Size(660, 461);
             this.car_dgv.TabIndex = 9;
             this.car_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.car_dgv_CellEnter);
             // 
@@ -302,7 +370,7 @@ namespace Taxi.Areas.Dispetcher
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(622, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(567, 440);
+            this.groupBox3.Size = new System.Drawing.Size(666, 484);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Автомобиль";
@@ -312,78 +380,36 @@ namespace Taxi.Areas.Dispetcher
             this.groupBox4.Controls.Add(this.refresh_btn);
             this.groupBox4.Controls.Add(this.add_btn);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(466, 321);
+            this.groupBox4.Location = new System.Drawing.Point(369, 357);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(150, 126);
+            this.groupBox4.Size = new System.Drawing.Size(241, 139);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Команды";
-            // 
-            // add_btn
-            // 
-            this.add_btn.Location = new System.Drawing.Point(6, 23);
-            this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(137, 27);
-            this.add_btn.TabIndex = 0;
-            this.add_btn.Text = "Добавить";
-            this.add_btn.UseVisualStyleBackColor = true;
-            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // refresh_btn
             // 
             this.refresh_btn.Location = new System.Drawing.Point(6, 59);
             this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(137, 27);
+            this.refresh_btn.Size = new System.Drawing.Size(229, 27);
             this.refresh_btn.TabIndex = 1;
             this.refresh_btn.Text = "Обновить";
             this.refresh_btn.UseVisualStyleBackColor = true;
             this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
             // 
-            // podezdN_nud
+            // add_btn
             // 
-            this.podezdN_nud.Location = new System.Drawing.Point(9, 244);
-            this.podezdN_nud.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.podezdN_nud.Name = "podezdN_nud";
-            this.podezdN_nud.Size = new System.Drawing.Size(134, 24);
-            this.podezdN_nud.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 18);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Подъезд";
-            // 
-            // podezdK_nud
-            // 
-            this.podezdK_nud.Location = new System.Drawing.Point(9, 244);
-            this.podezdK_nud.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.podezdK_nud.Name = "podezdK_nud";
-            this.podezdK_nud.Size = new System.Drawing.Size(134, 24);
-            this.podezdK_nud.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 223);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 18);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Подъезд";
+            this.add_btn.Location = new System.Drawing.Point(6, 23);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(229, 27);
+            this.add_btn.TabIndex = 0;
+            this.add_btn.Text = "Добавить";
+            this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.price_lb);
             this.groupBox5.Controls.Add(this.zivotnoe_cb);
             this.groupBox5.Controls.Add(this.bagazh_cb);
             this.groupBox5.Controls.Add(this.label12);
@@ -391,65 +417,22 @@ namespace Taxi.Areas.Dispetcher
             this.groupBox5.Controls.Add(this.econom_rb);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox5.Location = new System.Drawing.Point(12, 308);
+            this.groupBox5.Location = new System.Drawing.Point(12, 357);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(351, 139);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Тариф и доп. услуги";
             // 
-            // label11
+            // price_lb
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 18);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Тариф:";
-            // 
-            // econom_rb
-            // 
-            this.econom_rb.AutoSize = true;
-            this.econom_rb.Location = new System.Drawing.Point(86, 24);
-            this.econom_rb.Name = "econom_rb";
-            this.econom_rb.Size = new System.Drawing.Size(82, 22);
-            this.econom_rb.TabIndex = 1;
-            this.econom_rb.TabStop = true;
-            this.econom_rb.Text = "Эконом";
-            this.econom_rb.UseVisualStyleBackColor = true;
-            this.econom_rb.CheckedChanged += new System.EventHandler(this.econom_rb_CheckedChanged);
-            // 
-            // comfort_rb
-            // 
-            this.comfort_rb.AutoSize = true;
-            this.comfort_rb.Location = new System.Drawing.Point(174, 24);
-            this.comfort_rb.Name = "comfort_rb";
-            this.comfort_rb.Size = new System.Drawing.Size(93, 22);
-            this.comfort_rb.TabIndex = 2;
-            this.comfort_rb.TabStop = true;
-            this.comfort_rb.Text = "Комфорт";
-            this.comfort_rb.UseVisualStyleBackColor = true;
-            this.comfort_rb.CheckedChanged += new System.EventHandler(this.comfort_rb_CheckedChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 51);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 18);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Доп. услуги";
-            // 
-            // bagazh_cb
-            // 
-            this.bagazh_cb.AutoSize = true;
-            this.bagazh_cb.Location = new System.Drawing.Point(13, 72);
-            this.bagazh_cb.Name = "bagazh_cb";
-            this.bagazh_cb.Size = new System.Drawing.Size(70, 22);
-            this.bagazh_cb.TabIndex = 4;
-            this.bagazh_cb.Text = "Багаж";
-            this.bagazh_cb.UseVisualStyleBackColor = true;
-            this.bagazh_cb.CheckedChanged += new System.EventHandler(this.bagazh_cb_CheckedChanged);
+            this.price_lb.AutoSize = true;
+            this.price_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.price_lb.Location = new System.Drawing.Point(170, 100);
+            this.price_lb.Name = "price_lb";
+            this.price_lb.Size = new System.Drawing.Size(62, 20);
+            this.price_lb.TabIndex = 13;
+            this.price_lb.Text = "Цена: ";
             // 
             // zivotnoe_cb
             // 
@@ -462,21 +445,86 @@ namespace Taxi.Areas.Dispetcher
             this.zivotnoe_cb.UseVisualStyleBackColor = true;
             this.zivotnoe_cb.CheckedChanged += new System.EventHandler(this.zivotnoe_cb_CheckedChanged);
             // 
+            // bagazh_cb
+            // 
+            this.bagazh_cb.AutoSize = true;
+            this.bagazh_cb.Location = new System.Drawing.Point(13, 72);
+            this.bagazh_cb.Name = "bagazh_cb";
+            this.bagazh_cb.Size = new System.Drawing.Size(70, 22);
+            this.bagazh_cb.TabIndex = 4;
+            this.bagazh_cb.Text = "Багаж";
+            this.bagazh_cb.UseVisualStyleBackColor = true;
+            this.bagazh_cb.CheckedChanged += new System.EventHandler(this.bagazh_cb_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 51);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 18);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Доп. услуги";
+            // 
+            // comfort_rb
+            // 
+            this.comfort_rb.AutoSize = true;
+            this.comfort_rb.Location = new System.Drawing.Point(174, 24);
+            this.comfort_rb.Name = "comfort_rb";
+            this.comfort_rb.Size = new System.Drawing.Size(93, 22);
+            this.comfort_rb.TabIndex = 2;
+            this.comfort_rb.Text = "Комфорт";
+            this.comfort_rb.UseVisualStyleBackColor = true;
+            this.comfort_rb.CheckedChanged += new System.EventHandler(this.comfort_rb_CheckedChanged);
+            // 
+            // econom_rb
+            // 
+            this.econom_rb.AutoSize = true;
+            this.econom_rb.Checked = true;
+            this.econom_rb.Location = new System.Drawing.Point(86, 24);
+            this.econom_rb.Name = "econom_rb";
+            this.econom_rb.Size = new System.Drawing.Size(82, 22);
+            this.econom_rb.TabIndex = 1;
+            this.econom_rb.TabStop = true;
+            this.econom_rb.Text = "Эконом";
+            this.econom_rb.UseVisualStyleBackColor = true;
+            this.econom_rb.CheckedChanged += new System.EventHandler(this.econom_rb_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 18);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Тариф:";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(170, 100);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(12, 321);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 20);
+            this.label13.Size = new System.Drawing.Size(132, 18);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Цена: ";
+            this.label13.Text = "Телефон клиента";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(150, 322);
+            this.maskedTextBox1.Mask = "8 (000) 000-00-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(155, 24);
+            this.maskedTextBox1.TabIndex = 14;
+            this.maskedTextBox1.Text = "8888888888";
             // 
             // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 458);
+            this.ClientSize = new System.Drawing.Size(1300, 510);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -484,23 +532,25 @@ namespace Taxi.Areas.Dispetcher
             this.Controls.Add(this.groupBox1);
             this.Name = "AddOrder";
             this.Text = "Оформление заявки";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddOrder_FormClosing);
             this.Load += new System.EventHandler(this.AddOrder_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.houseN_nud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.podezdN_nud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corpusN_nud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseN_nud)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.podezdK_nud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corpusK_nud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseK_nud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_dgv)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.podezdN_nud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.podezdK_nud)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -540,6 +590,8 @@ namespace Taxi.Areas.Dispetcher
         private System.Windows.Forms.RadioButton comfort_rb;
         private System.Windows.Forms.RadioButton econom_rb;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label price_lb;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

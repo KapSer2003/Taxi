@@ -46,11 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Admin\AddCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\AddCars.Designer.cs">
+      <DependentUpon>AddCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\AddEmpl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\AddEmpl.Designer.cs">
+      <DependentUpon>AddEmpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Dispetcher\AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Areas\Dispetcher\AddOrder.Designer.cs">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Dispetcher\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Dispetcher\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Dispetcher\OtmenaOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Dispetcher\OtmenaOrder.Designer.cs">
+      <DependentUpon>OtmenaOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonForms\Autarization.cs">
       <SubType>Form</SubType>
@@ -61,8 +91,23 @@
     <Compile Include="Data.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Areas\Admin\AddCars.resx">
+      <DependentUpon>AddCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Admin\AddEmpl.resx">
+      <DependentUpon>AddEmpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Admin\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Areas\Dispetcher\AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Dispetcher\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Dispetcher\OtmenaOrder.resx">
+      <DependentUpon>OtmenaOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonForms\Autarization.resx">
       <DependentUpon>Autarization.cs</DependentUpon>
@@ -89,8 +134,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

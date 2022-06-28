@@ -30,11 +30,13 @@ namespace Taxi
                 DifinitionPost(Data.ConnectionString);
                 if(idPost == 1)
                 {
-
+                    new Areas.Admin.MainMenu().Show();
+                    ClearTB();
+                    this.Hide();
                 }
                 if (idPost == 2)
                 {
-                    new Areas.Dispetcher.AddOrder().Show();
+                    new Areas.Dispetcher.MainMenu().Show();
                     ClearTB();
                     this.Hide();
                 }
