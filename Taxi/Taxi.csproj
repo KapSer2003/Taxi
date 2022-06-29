@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Admin\AddCars.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Areas\Admin\AddCars.Designer.cs">
-      <DependentUpon>AddCars.cs</DependentUpon>
-    </Compile>
     <Compile Include="Areas\Admin\AddEmpl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     <Compile Include="Data.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Areas\Admin\AddCars.resx">
-      <DependentUpon>AddCars.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Areas\Admin\AddEmpl.resx">
       <DependentUpon>AddEmpl.cs</DependentUpon>
     </EmbeddedResource>

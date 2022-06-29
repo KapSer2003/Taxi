@@ -16,7 +16,7 @@ namespace Taxi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Areas.Admin.MainMenu());
+            Application.Run(new Autarization());
         }
     }
 }

@@ -22,10 +22,7 @@ namespace Taxi.Areas.Admin
             new AddEmpl().ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new AddCars().ShowDialog();
-        }
+        
 
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
