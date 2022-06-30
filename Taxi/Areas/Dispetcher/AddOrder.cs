@@ -34,7 +34,7 @@ namespace Taxi.Areas.Dispetcher
         private void car_dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             row = car_dgv.CurrentCell.RowIndex;
-            idDriver = (int)car_dgv[4, row].Value;
+            idDriver = (int)car_dgv[0, row].Value;
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -49,6 +49,8 @@ namespace Taxi.Areas.Dispetcher
 
         private void econom_rb_CheckedChanged(object sender, EventArgs e)
         {
+            bagazh_cb.Checked = false;
+            zivotnoe_cb.Checked = false;
             SelCar();
             SqlConnection con = new SqlConnection(Data.ConnectionString);
             SqlCommand com = new SqlCommand($"select PriceCity, Bagezh, Zhivotnoe from Rate where Name = '{econom_rb.Text}'", con);
@@ -84,6 +86,8 @@ namespace Taxi.Areas.Dispetcher
 
         private void comfort_rb_CheckedChanged(object sender, EventArgs e)
         {
+            bagazh_cb.Checked = false;
+            zivotnoe_cb.Checked = false;
             SelCar();
             SqlConnection con = new SqlConnection(Data.ConnectionString);
             SqlCommand com = new SqlCommand($"select PriceCity, Bagezh, Zhivotnoe from Rate where Name = '{comfort_rb.Text}'", con);
@@ -152,25 +156,25 @@ namespace Taxi.Areas.Dispetcher
         private void SelCar()
         {
             string CommandText = "select " +
-                "[Car].[Number] as 'Номер', " +
-                "[Car].[Region] as 'Регион', " +
-                "[Car].[Brand] as 'Марка', " +
-                "[Car].[Model] as 'Модель', " +
-                "[Car].[IDdriver], " +
-                "[Car].[ComfortClass] as 'Класс комфорта', " +
-                "[Car].[Status] as 'Статус' " +
+                "ID as 'Учётный номер автомобиля', " +
+                "Number as 'Номер', " +
+                "Region as 'Регион', " +
+                "Brand as 'Марка', " +
+                "Model as 'Модель', " +
+                "ComfortClass as 'Класс комфорта', " +
+                "Status as 'Статус' " +
                 "from " +
-                "[Car] " +
+                "Car " +
                 "where " +
-                "([Car].[Status] = 'Свободен') ";
+                "(Status = 'Свободен') ";
             
             if (econom_rb.Checked == true)
             {
-                CommandText += $"and ([Car].[ComfortClass] = '{econom_rb.Text}')";
+                CommandText += $"and (ComfortClass = '{econom_rb.Text}')";
             }
             if (comfort_rb.Checked == true)
             {
-                CommandText += $"and ([Car].[ComfortClass] = '{comfort_rb.Text}')";
+                CommandText += $"and (ComfortClass = '{comfort_rb.Text}')";
             }
 
             SqlDataAdapter dataAdapter = new SqlDataAdapter(CommandText, Data.ConnectionString);
@@ -178,7 +182,7 @@ namespace Taxi.Areas.Dispetcher
             dataAdapter.Fill(ds, "[Car]");
             car_dgv.DataSource = ds.Tables["[Car]"].DefaultView;
 
-            car_dgv.Columns[4].Visible = false;
+            //car_dgv.Columns[4].Visible = false;
         }
 
         private void AddOrder_FormClosing(object sender, FormClosingEventArgs e)
@@ -202,12 +206,14 @@ namespace Taxi.Areas.Dispetcher
                 "Values " +
                 $"({orderID}, 'Куда', '{localityK_tb.Text}', '{streetK_tb.Text}', {(int)houseK_nud.Value}, {(int)corpusK_nud.Value}, {(int)podezdK_nud.Value})", con);
 
+
             try
             {
                 con.Open();
                 addOrd.ExecuteNonQuery();
                 addAdr.ExecuteNonQuery();
                 addAdrk.ExecuteNonQuery();
+                UpdateCar();
                 MessageBox.Show("Данные успешно добавлены");
             }
             catch(Exception ex)
@@ -247,6 +253,26 @@ namespace Taxi.Areas.Dispetcher
             catch
             {
 
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void UpdateCar()
+        {
+            SqlConnection con = new SqlConnection(Data.ConnectionString);
+            SqlCommand udCar = new SqlCommand($"update Car set Status = 'На вызове' where ID = {idDriver}",con);
+
+            try
+            {
+                con.Open();
+                udCar.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Update status:\n" + ex.Message);
             }
             finally
             {

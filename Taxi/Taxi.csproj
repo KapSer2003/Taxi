@@ -70,6 +70,12 @@
     <Compile Include="Areas\Dispetcher\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Dispetcher\Otchet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\Dispetcher\Otchet.Designer.cs">
+      <DependentUpon>Otchet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Dispetcher\OtmenaOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Areas\Dispetcher\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Dispetcher\Otchet.resx">
+      <DependentUpon>Otchet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Areas\Dispetcher\OtmenaOrder.resx">
       <DependentUpon>OtmenaOrder.cs</DependentUpon>
